@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p id="demo">Table using Self-Invoked Function</p>
+
+<script>
+(function () {
+    document.getElementById('demo').style.textAlign = 'center';
+    document.getElementById('demo').style.fontSize = '40px';
+
+    // document.getElementById("demo").innerHTML.style.fontWeight = '400px'
+
+    var table = document.createElement('table');
+    var ch = 1;
+    table.style.width = '100%'
+    table.style.border = '2px solid black';
+
+    for (var i = 0; i < 5; i++){
+        var tr = document.createElement('tr');   
+
+        var td1 = document.createElement('td');
+        var td2 = document.createElement('td');
+        var td3 = document.createElement('td');
+        var td4 = document.createElement('td');
+        var td5 = document.createElement('td');
+        
+        var text1, text2, text3, text4, text5;
+
+        if(ch == 1){
+            text1 = document.createTextNode('Name');   
+            text2 = document.createTextNode('Shivanshu');
+            text3 = document.createTextNode('Mayank');
+            text4 = document.createTextNode('Yashu');         
+            text5 = document.createTextNode('Ankit');
+        }
+        else if(ch == 2){
+            text1 = document.createTextNode('Age');
+            text2 = document.createTextNode('22');
+            text3 = document.createTextNode('21');
+            text4 = document.createTextNode('22');         
+            text5 = document.createTextNode('23');
+        }
+        else if(ch == 3){
+            text1 = document.createTextNode('DOB');
+            text2 = document.createTextNode('24-08-1999');
+            text3 = document.createTextNode('09-08-1999');
+            text4 = document.createTextNode('21-07-2000');         
+            text5 = document.createTextNode('14-04-2000');
+        }
+        else if(ch == 4){
+            text1 = document.createTextNode('Email');
+            text2 = document.createTextNode('shivanshu123@gmail.com');
+            text3 = document.createTextNode('mayank123@gmail.com');
+            text4 = document.createTextNode('yash123@gmail.com');         
+            text5 = document.createTextNode('ankit123@gmail.com');
+        }
+        else if(ch == 5){
+            text1 = document.createTextNode('Company');
+            text2 = document.createTextNode('Gemini Solutions');
+            text3 = document.createTextNode('Gemini Solutions');
+            text4 = document.createTextNode('Gemini Solutions');         
+            text5 = document.createTextNode('Gemini Solutions');
+        }
+
+        td1.appendChild(text1);
+        td2.appendChild(text2);
+        td3.appendChild(text3);
+        td4.appendChild(text4);
+        td5.appendChild(text5);
+
+        td1.style.fontWeight = 'bold';
+        td1.style.textAlign = 'center';
+        td1.style.border = '1px solid black';
+        
+        td2.style.textAlign = 'center';
+        td2.style.border = '1px solid black';
+
+        td3.style.textAlign = 'center';
+        td3.style.border = '1px solid black';
+
+        td4.style.textAlign = 'center';
+        td4.style.border = '1px solid black';
+
+        td5.style.textAlign = 'center';
+        td5.style.border = '1px solid black';
+
+        tr.appendChild(td1);
+        tr.appendChild(td2);
+        tr.appendChild(td3);
+        tr.appendChild(td4);
+        tr.appendChild(td5);
+
+        table.appendChild(tr);
+        ch++;
+    }
+
+    document.body.appendChild(table);
+})();
+</script>
+</body>
+</html>
